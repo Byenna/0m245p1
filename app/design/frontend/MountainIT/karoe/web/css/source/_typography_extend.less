@@ -1,0 +1,43 @@
+@baseDir: "../"; // Base directory path
+
+.lib-font-face(
+    @family-name,
+    @font-path,
+    @font-format: false,
+    @font-weight: normal,
+    @font-style: normal,
+    @font-display: auto,
+    @font-type: false
+) when (@font-format = false) {
+    @font-face {
+        font-family: @family-name;
+        src: url('@{font-path}.woff2') format('woff2');
+        font-weight: @font-weight;
+        font-style: @font-style;
+        font-display: @font-display;
+    }
+}
+
+.lib-font-face(
+    @family-name: 'MontserratRegular',
+    @font-path: '@{baseDir}fonts/montserrat-v25-latin-regular',
+    @font-weight: normal,
+    @font-style: normal,
+    @font-display: swap
+);
+
+.lib-font-face(
+    @family-name: 'MontserratBold',
+    @font-path: '@{baseDir}fonts/montserrat-v25-latin-500',
+    @font-weight: 500,
+    @font-style: normal,
+    @font-display: swap
+);
+
+.lib-font-face(
+    @family-name: 'MontserratExtraBold',
+    @font-path: '@{baseDir}fonts/montserrat-v25-latin-700',
+    @font-weight: 700,
+    @font-style: normal,
+    @font-display: swap
+);
