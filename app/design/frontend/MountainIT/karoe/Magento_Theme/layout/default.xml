@@ -15,6 +15,11 @@
             </block>
         </referenceContainer>
         <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="Footer_Accordion">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_accordion</argument>
+                </arguments>
+            </block>
             <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
         </referenceContainer>
         <referenceBlock name="report.bugs" remove="true"/>

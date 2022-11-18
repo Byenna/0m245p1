@@ -1,0 +1,31 @@
+& when (@media-common = true) {
+
+.minicart-wrapper {
+    .action.showcart {
+        &.active {
+            content: @icon-basket;
+            font-family: 'karoe-theme';
+
+            &:before {
+                content: @icon-basket;
+                font-family: 'karoe-theme';
+            }
+        }
+
+        &:before {
+            content: @icon-basket;
+            font-family: 'karoe-theme';
+        }
+
+    }
+}
+
+    //.minicart-wrapper {
+    //    .action.showcart {
+    //        .lib-icon-font (
+    //            @_icon-font-content: @icon-basket;
+    //            @_icon-font-size: 24;
+    //        )
+    //    }
+    //}
+}
