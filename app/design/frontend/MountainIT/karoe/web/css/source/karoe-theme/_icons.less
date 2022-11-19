@@ -1,3 +1,24 @@
+& when (@media-common = true) {
+//cart-icon
+    .minicart-wrapper {
+        .action.showcart {
+            &.active {
+                content: @icon-basket;
+                font-family: @icons2__font-name;
 
+                &:before {
+                    content: @icon-basket;
+                    font-family: @icons2__font-name;
+                }
+            }
+
+            &:before {
+                content: @icon-basket;
+                font-family: @icons2__font-name;
+            }
+
+        }
+    }
+}
 
 

@@ -14,15 +14,41 @@
                 </arguments>
             </block>
         </referenceContainer>
-        <referenceContainer name="footer">
+        <referenceContainer name="footer-container">
+        <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content"/>
+
+        <container name="top_part_footer" as="top_part_footer" label="Top Part Footer" htmlTag="div" htmlClass="top_part_footer">
             <block class="Magento\Cms\Block\Block" name="Footer_Accordion">
                 <arguments>
                     <argument name="block_id" xsi:type="string">footer_accordion</argument>
                 </arguments>
             </block>
-            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
+        </container>
+        <container name="left_part_footer" as="left_part_footer" label="Left Part Footer" htmlTag="div" htmlClass="left_part_footer">
+            <block class="Magento\Cms\Block\Block" name="Block_Left_Part_footer">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">block_left_part_footer</argument>
+                </arguments>
+            </block>
+        </container>
+        <container name="bottom_part_footer" as="bottom_part_footer" label="Bottom Part Footer" htmlTag="div" htmlClass="bottom_part_footer">
+            <block class="Magento\Cms\Block\Block" name="Footer_USP">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_usp</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="Footer_Subscription">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_subscription</argument>
+                </arguments>
+            </block>
+        </container>
+
         </referenceContainer>
+
         <referenceBlock name="report.bugs" remove="true"/>
         <move element="copyright" destination="before.body.end"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="footer" remove="true"/>
     </body>
 </page>

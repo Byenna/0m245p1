@@ -1,0 +1,40 @@
+& when (@media-common = true) {
+
+}
+
+
+//  Mobile (styles-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .footer-col{
+        display: none;
+    }
+    #footer_accordion {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+//
+//  Desktop (style-l.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    #footer_accordion {
+        display: none;
+    }
+    .bottom_part_footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .page-footer {
+        display: flex;
+        justify-content: space-between;
+    } // your code @screen__xl: 1440px;
+}
